@@ -43,13 +43,17 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               '本日の教室予約',
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const <Widget>[
-                TodayAvailableClassroomCard(),
-                TodayAvailableClassroomCard(),
-              ],
+            SizedBox(
+              height: 100,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  TodayAvailableClassroomCard(),
+                  TodayAvailableClassroomCard(),
+                  TodayAvailableClassroomCard(),
+                  TodayAvailableClassroomCard(),
+                ],
+              ),
             ),
           ],
         ),
