@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              '本日の教室予約',
+              '本日の空き教室',
             ),
             SizedBox(
               height: 100,
