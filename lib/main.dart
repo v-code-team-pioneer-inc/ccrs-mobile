@@ -46,57 +46,52 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                GestureDetector(
-                  child: SizedBox(
-                    width: 150,
-                    height: 100,
-                    child: Card(
-                      child: Container(
-                        child: Container(
-                          padding: EdgeInsets.all(16),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                'F301',
-                                style: TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: 4),
-                              Text(
-                                '14:00 - 15:00',
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  child: SizedBox(
-                    width: 150,
-                    height: 100,
-                    child: Card(
-                      child: const Center(
-                        child: Text('教室A'),
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                ),
+              children: const <Widget>[
+                TodayAvailableClassroomCard(),
+                TodayAvailableClassroomCard(),
               ],
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class TodayAvailableClassroomCard extends StatelessWidget {
+  const TodayAvailableClassroomCard({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: SizedBox(
+        width: 150,
+        height: 100,
+        child: Card(
+          child: Container(
+            child: Container(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'F301',
+                    style: TextStyle(
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    '14:00 - 15:00',
+                    style: TextStyle(fontSize: 15),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
         ),
       ),
     );
