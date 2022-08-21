@@ -84,16 +84,17 @@ class TodayAvailableClassroomCard extends StatelessWidget {
                   ),
                 ),
                 Column(
-                children: [
-                  SizedBox(height: 4),
+                  children: [
+                    const SizedBox(height: 4),
                     const Text(
                       '14:00 - 15:00',
                       style: TextStyle(fontSize: 15),
                     ),
+                    const SizedBox(height: 4),
                     Center(
                       child: SizedBox(
-                        height: 25,
-                        width: 100,
+                        height: 22,
+                        width: 75,
                         child: ElevatedButton(
                           onPressed: () {},
                           child: const Text(
