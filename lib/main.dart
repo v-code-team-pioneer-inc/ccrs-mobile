@@ -68,25 +68,42 @@ class TodayAvailableClassroomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 150,
-      height: 100,
+      height: 150,
       child: Card(
         child: Container(
           child: Container(
             padding: EdgeInsets.all(16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   'F301',
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 4),
-                Text(
-                  '14:00 - 15:00',
-                  style: TextStyle(fontSize: 15),
+                Column(
+                children: [
+                  SizedBox(height: 4),
+                    const Text(
+                      '14:00 - 15:00',
+                      style: TextStyle(fontSize: 15),
+                    ),
+                    Center(
+                      child: SizedBox(
+                        height: 25,
+                        width: 100,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: const Text(
+                            '行くかも',
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
