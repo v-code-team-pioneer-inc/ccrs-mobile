@@ -38,11 +38,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: <Widget>[
-          // 左寄せ
-          const Text(
-            '本日の空き教室',
-            textAlign: TextAlign.left,
+          const SizedBox(
+            width: double.infinity,
+            child: Text(
+              '本日の空き教室',
+              textAlign: TextAlign.left,
+            ),
           ),
+          // 左寄せ
           SizedBox(
             height: 100,
             child: ListView(
