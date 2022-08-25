@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             onPressed: () => Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) {
-              return NewView1();
+              return const RoomsScreen();
             })),
           ),
         ],
