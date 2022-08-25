@@ -36,27 +36,26 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              '本日の空き教室',
+      body: Column(
+        children: <Widget>[
+          // 左寄せ
+          const Text(
+            '本日の空き教室',
+            textAlign: TextAlign.left,
+          ),
+          SizedBox(
+            height: 100,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: const [
+                TodayAvailableClassroomCard(),
+                TodayAvailableClassroomCard(),
+                TodayAvailableClassroomCard(),
+                TodayAvailableClassroomCard(),
+              ],
             ),
-            SizedBox(
-              height: 100,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: const [
-                  TodayAvailableClassroomCard(),
-                  TodayAvailableClassroomCard(),
-                  TodayAvailableClassroomCard(),
-                  TodayAvailableClassroomCard(),
-                ],
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
