@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// TodayAvailableClassroomCard
+import 'screen/rooms_screen.dart';
 import 'components/today_available_classroom_card.dart';
 
 void main() {
@@ -64,6 +64,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 TodayAvailableClassroomCard(),
               ],
             ),
+          ),
+          const SizedBox(height: 120),
+          // button
+          ElevatedButton(
+            child: const Text(
+              '教室を検索する',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+            // 色を白に
+            style:ElevatedButton.styleFrom(
+              primary: Colors.white,
+            ),
+            onPressed: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) {
+              return NewView1();
+            })),
           ),
         ],
       ),
