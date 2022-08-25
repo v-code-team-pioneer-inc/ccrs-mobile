@@ -39,9 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: <Widget>[
           const SizedBox(height: 20),
-          const SizedBox(
+          Container(
             width: double.infinity,
-            child: Text(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: const Text(
               '本日の空き教室',
               style: TextStyle(fontWeight: FontWeight.bold),
               textAlign: TextAlign.left,
