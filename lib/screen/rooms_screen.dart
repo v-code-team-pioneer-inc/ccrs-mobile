@@ -5,12 +5,9 @@ class RoomsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('教室ページ'),
-      ),
-      body: const Center(
-        child: Text('教室ページ'),
+    return const SafeArea(
+      child: Center(
+        child: Text('ここに教室一覧の表を表示する'),
       ),
     );
   }
