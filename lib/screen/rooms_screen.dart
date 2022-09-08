@@ -20,7 +20,9 @@ class RoomsScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            DataTable(
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: DataTable(
               columns: const [
                 DataColumn(
                   label: Text('時間'),
@@ -31,12 +33,20 @@ class RoomsScreen extends StatelessWidget {
                 DataColumn(
                   label: Text('F101'),
                 ),
+                DataColumn(
+                  label: Text('F102'),
+                ),
+                DataColumn(
+                  label: Text('F103'),
+                ),
               ],
               rows: const [
                 DataRow(
                   cells: [
                     DataCell(Text('09:00 ~ 10:40')),
                     DataCell(Text('×')),
+                    DataCell(Text('◯')),
+                    DataCell(Text('◯')),
                     DataCell(Text('◯')),
                   ],
                 ),
@@ -45,6 +55,8 @@ class RoomsScreen extends StatelessWidget {
                     DataCell(Text('10:50 ~ 12:30')),
                     DataCell(Text('◯')),
                     DataCell(Text('◯')),
+                    DataCell(Text('×')),
+                    DataCell(Text('◯')),
                   ],
                 ),
                 DataRow(
@@ -52,9 +64,21 @@ class RoomsScreen extends StatelessWidget {
                     DataCell(Text('12:30 ~ 13:20')),
                     DataCell(Text('◯')),
                     DataCell(Text('×')),
+                    DataCell(Text('×')),
+                    DataCell(Text('×')),
+                  ],
+                ),
+                DataRow(
+                  cells: [
+                    DataCell(Text('13:20 ~ 15:00')),
+                    DataCell(Text('◯')),
+                    DataCell(Text('◯')),
+                    DataCell(Text('◯')),
+                    DataCell(Text('×')),
                   ],
                 ),
               ],
+            ),
             ),
           ],
         ),
