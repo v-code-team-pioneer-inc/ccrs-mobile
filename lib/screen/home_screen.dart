@@ -37,23 +37,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 120),
-            // button
-            ElevatedButton(
-              child: const Text(
-                '教室を検索する',
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
-              // 色を白に
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-              ),
-              onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) {
-                return const RoomsScreen();
-              })),
-            ),
           ],
         ),
       )
