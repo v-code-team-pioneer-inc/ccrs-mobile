@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import './rooms_screen.dart';
 import '../components/today_available_classroom_card.dart';
 
 class HomeScreen extends StatelessWidget {
