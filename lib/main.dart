@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'screen/home_screen.dart';
 import 'screen/rooms_screen.dart';
+import 'screen/timetable_screen.dart';
 
 
 void main() {
@@ -37,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   static const _screens = [
     HomeScreen(),
     RoomsScreen(),
+    TimetableScreen(),
   ];
 
   int _selectedIndex = 0;
@@ -57,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム'),
           BottomNavigationBarItem(icon: Icon(Icons.meeting_room), label: '教室使用予定'),
+          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: '時間割'),
         ],
         type: BottomNavigationBarType.fixed,
       )
